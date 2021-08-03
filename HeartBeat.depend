@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1628017981 source:e:\swiftact2021_rev\heartbeat\gpio.c
+	<pic16f877a.h>
+	"gpio.h"
+	"utilites.h"
+
+1628017758 e:\swiftact2021_rev\heartbeat\gpio.h
+	"utilites.h"
+
+1628017758 e:\swiftact2021_rev\heartbeat\utilites.h
+
+1628017758 source:e:\swiftact2021_rev\heartbeat\gpio.h
+	"utilites.h"
+
+1628018040 source:e:\swiftact2021_rev\heartbeat\led.c
+	"led.h"
+	"gpio.h"
+	"utilites.h"
+
+1628009004 e:\swiftact2021_rev\heartbeat\led.h
+
+1628009004 source:e:\swiftact2021_rev\heartbeat\led.h
+
+1628027923 source:e:\swiftact2021_rev\heartbeat\heartbeat.c
+	<pic16f877a.h>
+	"led.h"
+
