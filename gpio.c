@@ -17,11 +17,11 @@ void GPIO_InitPin(tPORT port , tPIN pin ,tPIN_DIRECTION direction ,tSTATE init_s
 }
 void GPIO_UpdatePort(void)
 {
-
+ /* should do no thing */
 }
 void GPIO_UpdatePin(void)
 {
-
+/*  should do no thing */
 }
 void GPIO_SetPortState(tPORT port,tSTATE state)
 {
@@ -125,19 +125,19 @@ U8 GPIO_GetPortState(tPORT port)
     switch(port)
     {
     case PORT_A :
-      ret=  GetRegisterValue(PORTA) ;
+      ret=  ReadRegisterValue(PORTA) ;
     break;
     case PORT_B :
-      ret=  GetRegisterValue(PORTB) ;
+      ret=  ReadRegisterValue(PORTB) ;
     break;
     case PORT_C :
-      ret=  GetRegisterValue(PORTC) ;
+      ret=  ReadRegisterValue(PORTC) ;
     break;
     case PORT_D :
-      ret=  GetRegisterValue(PORTD) ;
+      ret=  ReadRegisterValue(PORTD) ;
     break;
     case PORT_E :
-      ret=  GetRegisterValue(PORTE) ;
+      ret=  ReadRegisterValue(PORTE) ;
     break;
     default :
         /* should not be here */
@@ -151,19 +151,19 @@ U8 GPIO_GetPortDirection(tPORT port)
     switch(port)
     {
     case PORT_A :
-      ret=  GetRegisterValue(TRISA) ;
+      ret=  ReadRegisterValue(TRISA) ;
     break;
     case PORT_B :
-      ret=  GetRegisterValue(TRISB) ;
+      ret=  ReadRegisterValue(TRISB) ;
     break;
     case PORT_C :
-      ret=  GetRegisterValue(TRISC) ;
+      ret=  ReadRegisterValue(TRISC) ;
     break;
     case PORT_D :
-      ret=  GetRegisterValue(TRISD) ;
+      ret=  ReadRegisterValue(TRISD) ;
     break;
     case PORT_E :
-      ret=  GetRegisterValue(TRISE) ;
+      ret=  ReadRegisterValue(TRISE) ;
     break;
     default :
         /* should not be here */
@@ -177,19 +177,19 @@ tSTATE GPIO_GetPinState(tPORT port , tPIN pin)
     switch(port)
     {
     case PORT_A :
-      ret=  GetRegisterPinValue(PORTA,pin) ;
+      ret=  ReadRegisterPinValue(PORTA,pin) ;
     break;
     case PORT_B :
-      ret=  GetRegisterPinValue(PORTB,pin) ;
+      ret=  ReadRegisterPinValue(PORTB,pin) ;
     break;
     case PORT_C :
-      ret=  GetRegisterPinValue(PORTC,pin) ;
+      ret=  ReadRegisterPinValue(PORTC,pin) ;
     break;
     case PORT_D :
-      ret=  GetRegisterPinValue(PORTD,pin) ;
+      ret=  ReadRegisterPinValue(PORTD,pin) ;
     break;
     case PORT_E :
-      ret=  GetRegisterPinValue(PORTE,pin) ;
+      ret=  ReadRegisterPinValue(PORTE,pin) ;
     break;
     default :
         /* should not be here */
@@ -203,19 +203,19 @@ tPIN_DIRECTION GPIO_GetPinDirection(tPORT port, tPIN pin)
     switch(port)
     {
     case PORT_A :
-      ret=  GetRegisterPinValue(TRISA,pin) ;
+      ret=  ReadRegisterPinValue(TRISA,pin) ;
     break;
     case PORT_B :
-      ret=  GetRegisterPinValue(TRISB,pin) ;
+      ret=  ReadRegisterPinValue(TRISB,pin) ;
     break;
     case PORT_C :
-      ret=  GetRegisterPinValue(TRISC,pin) ;
+      ret=  ReadRegisterPinValue(TRISC,pin) ;
     break;
     case PORT_D :
-      ret=  GetRegisterPinValue(TRISD,pin) ;
+      ret=  ReadRegisterPinValue(TRISD,pin) ;
     break;
     case PORT_E :
-      ret=  GetRegisterPinValue(TRISE,pin) ;
+      ret=  ReadRegisterPinValue(TRISE,pin) ;
     break;
     default :
         /* should not be here */

@@ -25,6 +25,31 @@
 				</Compiler>
 			</Target>
 		</Build>
+		<Unit filename="HeartBeat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gpio.h">
+			<Option compilerVar="CC" />
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Unit filename="led.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="led.h">
+			<Option compilerVar="CC" />
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Unit filename="utilites.c">
+			<Option compilerVar="CPP" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="utilites.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
