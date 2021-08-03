@@ -3,7 +3,7 @@
 #include "utilites.h"
 #define SetRegisterPin(Register,Pin,_1bitValue) ( Register = (Register & (~(1<<Pin ))) | (_1bitValue << Pin) )
 #define SetRegister(Register,_U8Value)          (Register = _U8Value )
-#define ReadRegisterPinValue(Register,Pin)       (Register & (~(1<<Pin)))>>Pin
+#define ReadRegisterPinValue(Register,Pin)       ((Register & ((1<<Pin)))>>Pin)
 #define ReadRegisterValue(Register)              (Register)
 typedef enum
 {
