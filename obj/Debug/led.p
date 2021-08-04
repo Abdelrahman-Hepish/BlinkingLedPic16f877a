@@ -1007,7 +1007,7 @@ _LED_Update:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1357:mov2w_op *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1375:mov2w_op
 	.line	23; "led.c"	UTILITES_DelayMS(DELAY_TIME) ;
-	MOVLW	0x64
+	MOVLW	0xc8
 ;; 	2158 left AOP_LIT
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2166:genCall
 ;; ***	popRegFromIdx,1059  , rIdx=0x7f

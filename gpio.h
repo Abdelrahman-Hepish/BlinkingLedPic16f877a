@@ -1,10 +1,5 @@
 #ifndef __GPIO_H__
 #define __GPIO_H__
-#include "utilites.h"
-#define SetRegisterPin(Register,Pin,_1bitValue) ( Register = (Register & (~(1<<Pin ))) | (_1bitValue << Pin) )
-#define SetRegister(Register,_U8Value)          (Register = _U8Value )
-#define ReadRegisterPinValue(Register,Pin)       ((Register & ((1<<Pin)))>>Pin)
-#define ReadRegisterValue(Register)              (Register)
 typedef enum
 {
     PORT_A ,
@@ -47,8 +42,8 @@ void GPIO_SetPortState(tPORT port,tSTATE state);
 void GPIO_SetPortDirection(tPORT port,tPORT_DIRECTION direction);
 void GPIO_SetPinState(tPORT port , tPIN pin , tSTATE state);
 void GPIO_SetPinDirection(tPORT port, tPIN pin ,tPIN_DIRECTION direction);
-U8 GPIO_GetPortState(tPORT port);
-U8 GPIO_GetPortDirection(tPORT port);
+unsigned char GPIO_GetPortState(tPORT port);
+unsigned char GPIO_GetPortDirection(tPORT port);
 tSTATE GPIO_GetPinState(tPORT port , tPIN pin);
 tPIN_DIRECTION GPIO_GetPinDirection(tPORT port, tPIN pin);
 #endif // __GPIO_H__

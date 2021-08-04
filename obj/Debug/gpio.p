@@ -23,7 +23,7 @@ _GPIO_GetPinDirection:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1063, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1063 
-	.line	200; "gpio.c"	tPIN_DIRECTION GPIO_GetPinDirection(tPORT port, tPIN pin)
+	.line	206; "gpio.c"	tPIN_DIRECTION GPIO_GetPinDirection(tPORT port, tPIN pin)
 	MOVWF	r0x1000
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -46,7 +46,7 @@ _GPIO_GetPinDirection:
 ;; ***	genAssign  7286
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7298:genAssign
 ;;	1126 rIdx = r0x1065 
-	.line	202; "gpio.c"	tPIN_DIRECTION ret = PIN_OUTPUT ;
+	.line	208; "gpio.c"	tPIN_DIRECTION ret = PIN_OUTPUT ;
 	CLRF	r0x1002
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3616:genCmpGt *{*
@@ -56,7 +56,7 @@ _GPIO_GetPinDirection:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	203; "gpio.c"	switch(port)
+	.line	209; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x1063 
@@ -117,7 +117,7 @@ _00348_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00334_DS_:
-	.line	206; "gpio.c"	ret=  ReadRegisterPinValue(TRISA,pin) ;
+	.line	212; "gpio.c"	ret=  ReadRegisterPinValue(TRISA,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1066 
@@ -158,26 +158,6 @@ _00349_DS_:
 ;; ***	popGetLabel  key=16, label offset 233
 	GOTO	_00349_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1063 
-_00350_DS_:
-	COMF	r0x1000,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1063 
-	MOVWF	r0x1000
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1066 
-	COMF	r0x1003,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1066 
-	MOVWF	r0x1003
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -187,6 +167,7 @@ _00350_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _TRISA   offset=0
+_00350_DS_:
 	MOVF	_TRISA,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1067 
@@ -289,7 +270,7 @@ _00352_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 233
-	.line	207; "gpio.c"	break;
+	.line	213; "gpio.c"	break;
 	GOTO	_00340_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -302,7 +283,7 @@ _00352_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00335_DS_:
-	.line	209; "gpio.c"	ret=  ReadRegisterPinValue(TRISB,pin) ;
+	.line	215; "gpio.c"	ret=  ReadRegisterPinValue(TRISB,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1066 
@@ -343,26 +324,6 @@ _00353_DS_:
 ;; ***	popGetLabel  key=20, label offset 233
 	GOTO	_00353_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1063 
-_00354_DS_:
-	COMF	r0x1000,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1063 
-	MOVWF	r0x1000
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1066 
-	COMF	r0x1003,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1066 
-	MOVWF	r0x1003
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -372,6 +333,7 @@ _00354_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _TRISB   offset=0
+_00354_DS_:
 	MOVF	_TRISB,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1067 
@@ -474,7 +436,7 @@ _00356_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 233
-	.line	210; "gpio.c"	break;
+	.line	216; "gpio.c"	break;
 	GOTO	_00340_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -487,7 +449,7 @@ _00356_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00336_DS_:
-	.line	212; "gpio.c"	ret=  ReadRegisterPinValue(TRISC,pin) ;
+	.line	218; "gpio.c"	ret=  ReadRegisterPinValue(TRISC,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1066 
@@ -528,26 +490,6 @@ _00357_DS_:
 ;; ***	popGetLabel  key=24, label offset 233
 	GOTO	_00357_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1063 
-_00358_DS_:
-	COMF	r0x1000,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1063 
-	MOVWF	r0x1000
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1066 
-	COMF	r0x1003,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1066 
-	MOVWF	r0x1003
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -557,6 +499,7 @@ _00358_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _TRISC   offset=0
+_00358_DS_:
 	MOVF	_TRISC,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1067 
@@ -659,7 +602,7 @@ _00360_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 233
-	.line	213; "gpio.c"	break;
+	.line	219; "gpio.c"	break;
 	GOTO	_00340_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -672,7 +615,7 @@ _00360_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00337_DS_:
-	.line	215; "gpio.c"	ret=  ReadRegisterPinValue(TRISD,pin) ;
+	.line	221; "gpio.c"	ret=  ReadRegisterPinValue(TRISD,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1066 
@@ -713,26 +656,6 @@ _00361_DS_:
 ;; ***	popGetLabel  key=28, label offset 233
 	GOTO	_00361_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1063 
-_00362_DS_:
-	COMF	r0x1000,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1063 
-	MOVWF	r0x1000
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1066 
-	COMF	r0x1003,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1066 
-	MOVWF	r0x1003
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -742,6 +665,7 @@ _00362_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _TRISD   offset=0
+_00362_DS_:
 	MOVF	_TRISD,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1067 
@@ -844,7 +768,7 @@ _00364_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 233
-	.line	216; "gpio.c"	break;
+	.line	222; "gpio.c"	break;
 	GOTO	_00340_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -857,7 +781,7 @@ _00364_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00338_DS_:
-	.line	218; "gpio.c"	ret=  ReadRegisterPinValue(TRISE,pin) ;
+	.line	224; "gpio.c"	ret=  ReadRegisterPinValue(TRISE,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1066 
@@ -898,26 +822,6 @@ _00365_DS_:
 ;; ***	popGetLabel  key=32, label offset 233
 	GOTO	_00365_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1063 
-_00366_DS_:
-	COMF	r0x1000,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1063 
-	MOVWF	r0x1000
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1066 
-	COMF	r0x1003,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1066 
-	MOVWF	r0x1003
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -927,6 +831,7 @@ _00366_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _TRISE   offset=0
+_00366_DS_:
 	MOVF	_TRISE,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1067 
@@ -1037,7 +942,7 @@ _00368_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1065 
 _00340_DS_:
-	.line	224; "gpio.c"	return ret ;
+	.line	230; "gpio.c"	return ret ;
 	MOVF	r0x1002,W
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -1045,7 +950,7 @@ _00340_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	225; "gpio.c"	}
+	.line	231; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_GetPinDirection
 
@@ -1071,7 +976,7 @@ _GPIO_GetPinState:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x105D, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x105D 
-	.line	174; "gpio.c"	tSTATE GPIO_GetPinState(tPORT port , tPIN pin)
+	.line	180; "gpio.c"	tSTATE GPIO_GetPinState(tPORT port , tPIN pin)
 	MOVWF	r0x1006
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -1094,7 +999,7 @@ _GPIO_GetPinState:
 ;; ***	genAssign  7286
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7298:genAssign
 ;;	1126 rIdx = r0x105F 
-	.line	176; "gpio.c"	tSTATE ret = LOW ;
+	.line	182; "gpio.c"	tSTATE ret = LOW ;
 	CLRF	r0x1008
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3616:genCmpGt *{*
@@ -1104,7 +1009,7 @@ _GPIO_GetPinState:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	177; "gpio.c"	switch(port)
+	.line	183; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x105D 
@@ -1165,7 +1070,7 @@ _00309_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00295_DS_:
-	.line	180; "gpio.c"	ret=  ReadRegisterPinValue(PORTA,pin) ;
+	.line	186; "gpio.c"	ret=  ReadRegisterPinValue(PORTA,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1060 
@@ -1206,26 +1111,6 @@ _00310_DS_:
 ;; ***	popGetLabel  key=16, label offset 194
 	GOTO	_00310_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x105D 
-_00311_DS_:
-	COMF	r0x1006,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x105D 
-	MOVWF	r0x1006
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1060 
-	COMF	r0x1009,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1060 
-	MOVWF	r0x1009
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -1235,6 +1120,7 @@ _00311_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _PORTA   offset=0
+_00311_DS_:
 	MOVF	_PORTA,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1061 
@@ -1337,7 +1223,7 @@ _00313_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 194
-	.line	181; "gpio.c"	break;
+	.line	187; "gpio.c"	break;
 	GOTO	_00301_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -1350,7 +1236,7 @@ _00313_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00296_DS_:
-	.line	183; "gpio.c"	ret=  ReadRegisterPinValue(PORTB,pin) ;
+	.line	189; "gpio.c"	ret=  ReadRegisterPinValue(PORTB,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1060 
@@ -1391,26 +1277,6 @@ _00314_DS_:
 ;; ***	popGetLabel  key=20, label offset 194
 	GOTO	_00314_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x105D 
-_00315_DS_:
-	COMF	r0x1006,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x105D 
-	MOVWF	r0x1006
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1060 
-	COMF	r0x1009,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1060 
-	MOVWF	r0x1009
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -1420,6 +1286,7 @@ _00315_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _PORTB   offset=0
+_00315_DS_:
 	MOVF	_PORTB,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1061 
@@ -1522,7 +1389,7 @@ _00317_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 194
-	.line	184; "gpio.c"	break;
+	.line	190; "gpio.c"	break;
 	GOTO	_00301_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -1535,7 +1402,7 @@ _00317_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00297_DS_:
-	.line	186; "gpio.c"	ret=  ReadRegisterPinValue(PORTC,pin) ;
+	.line	192; "gpio.c"	ret=  ReadRegisterPinValue(PORTC,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1060 
@@ -1576,26 +1443,6 @@ _00318_DS_:
 ;; ***	popGetLabel  key=24, label offset 194
 	GOTO	_00318_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x105D 
-_00319_DS_:
-	COMF	r0x1006,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x105D 
-	MOVWF	r0x1006
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1060 
-	COMF	r0x1009,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1060 
-	MOVWF	r0x1009
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -1605,6 +1452,7 @@ _00319_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _PORTC   offset=0
+_00319_DS_:
 	MOVF	_PORTC,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1061 
@@ -1707,7 +1555,7 @@ _00321_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 194
-	.line	187; "gpio.c"	break;
+	.line	193; "gpio.c"	break;
 	GOTO	_00301_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -1720,7 +1568,7 @@ _00321_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00298_DS_:
-	.line	189; "gpio.c"	ret=  ReadRegisterPinValue(PORTD,pin) ;
+	.line	195; "gpio.c"	ret=  ReadRegisterPinValue(PORTD,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1060 
@@ -1761,26 +1609,6 @@ _00322_DS_:
 ;; ***	popGetLabel  key=28, label offset 194
 	GOTO	_00322_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x105D 
-_00323_DS_:
-	COMF	r0x1006,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x105D 
-	MOVWF	r0x1006
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1060 
-	COMF	r0x1009,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1060 
-	MOVWF	r0x1009
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -1790,6 +1618,7 @@ _00323_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _PORTD   offset=0
+_00323_DS_:
 	MOVF	_PORTD,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1061 
@@ -1892,7 +1721,7 @@ _00325_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 194
-	.line	190; "gpio.c"	break;
+	.line	196; "gpio.c"	break;
 	GOTO	_00301_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -1905,7 +1734,7 @@ _00325_DS_:
 ;; ***	mov2w  1395  offset=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1398:mov2w
 _00299_DS_:
-	.line	192; "gpio.c"	ret=  ReadRegisterPinValue(PORTE,pin) ;
+	.line	198; "gpio.c"	ret=  ReadRegisterPinValue(PORTE,pin) ;
 	MOVLW	0x00
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1060 
@@ -1946,26 +1775,6 @@ _00326_DS_:
 ;; ***	popGetLabel  key=32, label offset 194
 	GOTO	_00326_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1609:genCpl *{*
-;; ***	genCpl  1611
-;;	708 register type nRegs=2
-;;	708 register type nRegs=2
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x105D 
-_00327_DS_:
-	COMF	r0x1006,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x105D 
-	MOVWF	r0x1006
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1631:genCpl
-;;	1126 rIdx = r0x1060 
-	COMF	r0x1009,W
-;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1632:genCpl
-;;	1126 rIdx = r0x1060 
-	MOVWF	r0x1009
-;; ***	addSign  1087
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/genarith.c:1088:addSign *{*
-;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7386:genCast *{*
 ;; ***	genCast  7387
 ;; ***	aopForSym 324
@@ -1975,6 +1784,7 @@ _00327_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7582:genCast
 ;;	1027
 ;;	1045  _PORTE   offset=0
+_00327_DS_:
 	MOVF	_PORTE,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7583:genCast
 ;;	1126 rIdx = r0x1061 
@@ -2085,7 +1895,7 @@ _00329_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x105F 
 _00301_DS_:
-	.line	198; "gpio.c"	return ret ;
+	.line	204; "gpio.c"	return ret ;
 	MOVF	r0x1008,W
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2093,7 +1903,7 @@ _00301_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	199; "gpio.c"	}
+	.line	205; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_GetPinState
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -2120,7 +1930,7 @@ _GPIO_GetPortDirection:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x105B, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x105B 
-	.line	148; "gpio.c"	U8 GPIO_GetPortDirection(tPORT port)
+	.line	154; "gpio.c"	unsigned char GPIO_GetPortDirection(tPORT port)
 	MOVWF	r0x100C
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7192:genAssign *{*
@@ -2130,7 +1940,7 @@ _GPIO_GetPortDirection:
 ;; ***	genAssign  7286
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7298:genAssign
 ;;	1126 rIdx = r0x105C 
-	.line	150; "gpio.c"	U8 ret = 0 ;
+	.line	156; "gpio.c"	unsigned char ret = 0 ;
 	CLRF	r0x100D
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3616:genCmpGt *{*
@@ -2140,7 +1950,7 @@ _GPIO_GetPortDirection:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	151; "gpio.c"	switch(port)
+	.line	157; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x105B 
@@ -2209,7 +2019,7 @@ _00290_DS_:
 ;;	1027
 ;;	1045  _TRISA   offset=0
 _00276_DS_:
-	.line	154; "gpio.c"	ret=  ReadRegisterValue(TRISA) ;
+	.line	160; "gpio.c"	ret=  ReadRegisterValue(TRISA) ;
 	MOVF	_TRISA,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105C 
@@ -2218,7 +2028,7 @@ _00276_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 175
-	.line	155; "gpio.c"	break;
+	.line	161; "gpio.c"	break;
 	GOTO	_00282_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2239,7 +2049,7 @@ _00276_DS_:
 ;;	1027
 ;;	1045  _TRISB   offset=0
 _00277_DS_:
-	.line	157; "gpio.c"	ret=  ReadRegisterValue(TRISB) ;
+	.line	163; "gpio.c"	ret=  ReadRegisterValue(TRISB) ;
 	MOVF	_TRISB,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105C 
@@ -2248,7 +2058,7 @@ _00277_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 175
-	.line	158; "gpio.c"	break;
+	.line	164; "gpio.c"	break;
 	GOTO	_00282_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2269,7 +2079,7 @@ _00277_DS_:
 ;;	1027
 ;;	1045  _TRISC   offset=0
 _00278_DS_:
-	.line	160; "gpio.c"	ret=  ReadRegisterValue(TRISC) ;
+	.line	166; "gpio.c"	ret=  ReadRegisterValue(TRISC) ;
 	MOVF	_TRISC,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105C 
@@ -2278,7 +2088,7 @@ _00278_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 175
-	.line	161; "gpio.c"	break;
+	.line	167; "gpio.c"	break;
 	GOTO	_00282_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2299,7 +2109,7 @@ _00278_DS_:
 ;;	1027
 ;;	1045  _TRISD   offset=0
 _00279_DS_:
-	.line	163; "gpio.c"	ret=  ReadRegisterValue(TRISD) ;
+	.line	169; "gpio.c"	ret=  ReadRegisterValue(TRISD) ;
 	MOVF	_TRISD,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105C 
@@ -2308,7 +2118,7 @@ _00279_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 175
-	.line	164; "gpio.c"	break;
+	.line	170; "gpio.c"	break;
 	GOTO	_00282_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2329,7 +2139,7 @@ _00279_DS_:
 ;;	1027
 ;;	1045  _TRISE   offset=0
 _00280_DS_:
-	.line	166; "gpio.c"	ret=  ReadRegisterValue(TRISE) ;
+	.line	172; "gpio.c"	ret=  ReadRegisterValue(TRISE) ;
 	MOVF	_TRISE,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105C 
@@ -2346,7 +2156,7 @@ _00280_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x105C 
 _00282_DS_:
-	.line	172; "gpio.c"	return ret ;
+	.line	178; "gpio.c"	return ret ;
 	MOVF	r0x100D,W
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2354,7 +2164,7 @@ _00282_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	173; "gpio.c"	}
+	.line	179; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_GetPortDirection
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -2381,7 +2191,7 @@ _GPIO_GetPortState:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1059, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1059 
-	.line	122; "gpio.c"	U8 GPIO_GetPortState(tPORT port)
+	.line	128; "gpio.c"	unsigned char GPIO_GetPortState(tPORT port)
 	MOVWF	r0x100E
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7192:genAssign *{*
@@ -2391,7 +2201,7 @@ _GPIO_GetPortState:
 ;; ***	genAssign  7286
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7298:genAssign
 ;;	1126 rIdx = r0x105A 
-	.line	124; "gpio.c"	U8 ret = 0 ;
+	.line	130; "gpio.c"	unsigned char ret = 0 ;
 	CLRF	r0x100F
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3616:genCmpGt *{*
@@ -2401,7 +2211,7 @@ _GPIO_GetPortState:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	125; "gpio.c"	switch(port)
+	.line	131; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x1059 
@@ -2470,7 +2280,7 @@ _00271_DS_:
 ;;	1027
 ;;	1045  _PORTA   offset=0
 _00257_DS_:
-	.line	128; "gpio.c"	ret=  ReadRegisterValue(PORTA) ;
+	.line	134; "gpio.c"	ret=  ReadRegisterValue(PORTA) ;
 	MOVF	_PORTA,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105A 
@@ -2479,7 +2289,7 @@ _00257_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 156
-	.line	129; "gpio.c"	break;
+	.line	135; "gpio.c"	break;
 	GOTO	_00263_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2500,7 +2310,7 @@ _00257_DS_:
 ;;	1027
 ;;	1045  _PORTB   offset=0
 _00258_DS_:
-	.line	131; "gpio.c"	ret=  ReadRegisterValue(PORTB) ;
+	.line	137; "gpio.c"	ret=  ReadRegisterValue(PORTB) ;
 	MOVF	_PORTB,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105A 
@@ -2509,7 +2319,7 @@ _00258_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 156
-	.line	132; "gpio.c"	break;
+	.line	138; "gpio.c"	break;
 	GOTO	_00263_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2530,7 +2340,7 @@ _00258_DS_:
 ;;	1027
 ;;	1045  _PORTC   offset=0
 _00259_DS_:
-	.line	134; "gpio.c"	ret=  ReadRegisterValue(PORTC) ;
+	.line	140; "gpio.c"	ret=  ReadRegisterValue(PORTC) ;
 	MOVF	_PORTC,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105A 
@@ -2539,7 +2349,7 @@ _00259_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 156
-	.line	135; "gpio.c"	break;
+	.line	141; "gpio.c"	break;
 	GOTO	_00263_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2560,7 +2370,7 @@ _00259_DS_:
 ;;	1027
 ;;	1045  _PORTD   offset=0
 _00260_DS_:
-	.line	137; "gpio.c"	ret=  ReadRegisterValue(PORTD) ;
+	.line	143; "gpio.c"	ret=  ReadRegisterValue(PORTD) ;
 	MOVF	_PORTD,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105A 
@@ -2569,7 +2379,7 @@ _00260_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=7, label offset 156
-	.line	138; "gpio.c"	break;
+	.line	144; "gpio.c"	break;
 	GOTO	_00263_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2590,7 +2400,7 @@ _00260_DS_:
 ;;	1027
 ;;	1045  _PORTE   offset=0
 _00261_DS_:
-	.line	140; "gpio.c"	ret=  ReadRegisterValue(PORTE) ;
+	.line	146; "gpio.c"	ret=  ReadRegisterValue(PORTE) ;
 	MOVF	_PORTE,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1126 rIdx = r0x105A 
@@ -2607,7 +2417,7 @@ _00261_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x105A 
 _00263_DS_:
-	.line	146; "gpio.c"	return ret ;
+	.line	152; "gpio.c"	return ret ;
 	MOVF	r0x100F,W
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2615,7 +2425,7 @@ _00263_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	147; "gpio.c"	}
+	.line	153; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_GetPortState
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -2642,7 +2452,7 @@ _GPIO_SetPinDirection:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1055, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1055 
-	.line	98; "gpio.c"	void GPIO_SetPinDirection(tPORT port, tPIN pin ,tPIN_DIRECTION direction)
+	.line	104; "gpio.c"	void GPIO_SetPinDirection(tPORT port, tPIN pin ,tPIN_DIRECTION direction)
 	MOVWF	r0x1010
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -2678,7 +2488,7 @@ _GPIO_SetPinDirection:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	100; "gpio.c"	switch(port)
+	.line	106; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x1055 
@@ -2741,7 +2551,7 @@ _00222_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1056 
 _00208_DS_:
-	.line	103; "gpio.c"	SetRegisterPin(TRISA,pin,direction) ;
+	.line	109; "gpio.c"	SetRegisterPin(TRISA,pin,direction) ;
 	MOVF	r0x1011,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1055 
@@ -2903,7 +2713,7 @@ _00228_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 107
-	.line	104; "gpio.c"	break;
+	.line	110; "gpio.c"	break;
 	GOTO	_00215_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -2918,7 +2728,7 @@ _00228_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1056 
 _00209_DS_:
-	.line	106; "gpio.c"	SetRegisterPin(TRISB,pin,direction) ;
+	.line	112; "gpio.c"	SetRegisterPin(TRISB,pin,direction) ;
 	MOVF	r0x1011,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1055 
@@ -3080,7 +2890,7 @@ _00234_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 107
-	.line	107; "gpio.c"	break;
+	.line	113; "gpio.c"	break;
 	GOTO	_00215_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -3095,7 +2905,7 @@ _00234_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1056 
 _00210_DS_:
-	.line	109; "gpio.c"	SetRegisterPin(TRISC,pin,direction) ;
+	.line	115; "gpio.c"	SetRegisterPin(TRISC,pin,direction) ;
 	MOVF	r0x1011,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1055 
@@ -3257,7 +3067,7 @@ _00240_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 107
-	.line	110; "gpio.c"	break;
+	.line	116; "gpio.c"	break;
 	GOTO	_00215_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -3272,7 +3082,7 @@ _00240_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1056 
 _00211_DS_:
-	.line	112; "gpio.c"	SetRegisterPin(TRISD,pin,direction) ;
+	.line	118; "gpio.c"	SetRegisterPin(TRISD,pin,direction) ;
 	MOVF	r0x1011,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1055 
@@ -3434,7 +3244,7 @@ _00246_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 107
-	.line	113; "gpio.c"	break;
+	.line	119; "gpio.c"	break;
 	GOTO	_00215_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -3449,7 +3259,7 @@ _00246_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1056 
 _00212_DS_:
-	.line	115; "gpio.c"	SetRegisterPin(TRISE,pin,direction) ;
+	.line	121; "gpio.c"	SetRegisterPin(TRISE,pin,direction) ;
 	MOVF	r0x1011,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1055 
@@ -3614,7 +3424,7 @@ _00252_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
 _00215_DS_:
-	.line	121; "gpio.c"	}
+	.line	127; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_SetPinDirection
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -3641,7 +3451,7 @@ _GPIO_SetPinState:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1051, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1051 
-	.line	74; "gpio.c"	void GPIO_SetPinState(tPORT port , tPIN pin , tSTATE state)
+	.line	80; "gpio.c"	void GPIO_SetPinState(tPORT port , tPIN pin , tSTATE state)
 	MOVWF	r0x1014
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -3677,7 +3487,7 @@ _GPIO_SetPinState:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	76; "gpio.c"	switch(port)
+	.line	82; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x1051 
@@ -3740,7 +3550,7 @@ _00173_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1052 
 _00159_DS_:
-	.line	79; "gpio.c"	SetRegisterPin(PORTA,pin,state) ;
+	.line	85; "gpio.c"	SetRegisterPin(PORTA,pin,state) ;
 	MOVF	r0x1015,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1051 
@@ -3902,7 +3712,7 @@ _00179_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 58
-	.line	80; "gpio.c"	break;
+	.line	86; "gpio.c"	break;
 	GOTO	_00166_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -3917,7 +3727,7 @@ _00179_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1052 
 _00160_DS_:
-	.line	82; "gpio.c"	SetRegisterPin(PORTB,pin,state) ;
+	.line	88; "gpio.c"	SetRegisterPin(PORTB,pin,state) ;
 	MOVF	r0x1015,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1051 
@@ -4079,7 +3889,7 @@ _00185_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 58
-	.line	83; "gpio.c"	break;
+	.line	89; "gpio.c"	break;
 	GOTO	_00166_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4094,7 +3904,7 @@ _00185_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1052 
 _00161_DS_:
-	.line	85; "gpio.c"	SetRegisterPin(PORTC,pin,state) ;
+	.line	91; "gpio.c"	SetRegisterPin(PORTC,pin,state) ;
 	MOVF	r0x1015,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1051 
@@ -4256,7 +4066,7 @@ _00191_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 58
-	.line	86; "gpio.c"	break;
+	.line	92; "gpio.c"	break;
 	GOTO	_00166_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4271,7 +4081,7 @@ _00191_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1052 
 _00162_DS_:
-	.line	88; "gpio.c"	SetRegisterPin(PORTD,pin,state) ;
+	.line	94; "gpio.c"	SetRegisterPin(PORTD,pin,state) ;
 	MOVF	r0x1015,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1051 
@@ -4433,7 +4243,7 @@ _00197_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 58
-	.line	89; "gpio.c"	break;
+	.line	95; "gpio.c"	break;
 	GOTO	_00166_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4448,7 +4258,7 @@ _00197_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7561:genCast
 ;;	1126 rIdx = r0x1052 
 _00163_DS_:
-	.line	91; "gpio.c"	SetRegisterPin(PORTE,pin,state) ;
+	.line	97; "gpio.c"	SetRegisterPin(PORTE,pin,state) ;
 	MOVF	r0x1015,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7562:genCast
 ;;	1126 rIdx = r0x1051 
@@ -4613,7 +4423,7 @@ _00203_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
 _00166_DS_:
-	.line	97; "gpio.c"	}
+	.line	103; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_SetPinState
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -4640,7 +4450,7 @@ _GPIO_SetPortDirection:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x104F, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x104F 
-	.line	50; "gpio.c"	void GPIO_SetPortDirection(tPORT port,tPORT_DIRECTION direction)
+	.line	56; "gpio.c"	void GPIO_SetPortDirection(tPORT port,tPORT_DIRECTION direction)
 	MOVWF	r0x1018
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -4663,7 +4473,7 @@ _GPIO_SetPortDirection:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	52; "gpio.c"	switch(port)
+	.line	58; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x104F 
@@ -4729,7 +4539,7 @@ _00154_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1050 
 _00140_DS_:
-	.line	55; "gpio.c"	SetRegister(TRISA,direction) ;
+	.line	61; "gpio.c"	SetRegister(TRISA,direction) ;
 	MOVF	r0x1019,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4739,7 +4549,7 @@ _00140_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 39
-	.line	56; "gpio.c"	break;
+	.line	62; "gpio.c"	break;
 	GOTO	_00147_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4757,7 +4567,7 @@ _00140_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1050 
 _00141_DS_:
-	.line	58; "gpio.c"	SetRegister(TRISB,direction) ;
+	.line	64; "gpio.c"	SetRegister(TRISB,direction) ;
 	MOVF	r0x1019,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4767,7 +4577,7 @@ _00141_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 39
-	.line	59; "gpio.c"	break;
+	.line	65; "gpio.c"	break;
 	GOTO	_00147_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4785,7 +4595,7 @@ _00141_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1050 
 _00142_DS_:
-	.line	61; "gpio.c"	SetRegister(TRISC,direction) ;
+	.line	67; "gpio.c"	SetRegister(TRISC,direction) ;
 	MOVF	r0x1019,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4795,7 +4605,7 @@ _00142_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 39
-	.line	62; "gpio.c"	break;
+	.line	68; "gpio.c"	break;
 	GOTO	_00147_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4813,7 +4623,7 @@ _00142_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1050 
 _00143_DS_:
-	.line	64; "gpio.c"	SetRegister(TRISD,direction) ;
+	.line	70; "gpio.c"	SetRegister(TRISD,direction) ;
 	MOVF	r0x1019,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4823,7 +4633,7 @@ _00143_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 39
-	.line	65; "gpio.c"	break;
+	.line	71; "gpio.c"	break;
 	GOTO	_00147_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4841,7 +4651,7 @@ _00143_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1050 
 _00144_DS_:
-	.line	67; "gpio.c"	SetRegister(TRISE,direction) ;
+	.line	73; "gpio.c"	SetRegister(TRISE,direction) ;
 	MOVF	r0x1019,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4854,7 +4664,7 @@ _00144_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
 _00147_DS_:
-	.line	73; "gpio.c"	}
+	.line	79; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_SetPortDirection
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -4881,7 +4691,7 @@ _GPIO_SetPortState:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x104C, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x104C 
-	.line	26; "gpio.c"	void GPIO_SetPortState(tPORT port,tSTATE state)
+	.line	32; "gpio.c"	void GPIO_SetPortState(tPORT port,tSTATE state)
 	MOVWF	r0x101A
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -4904,7 +4714,7 @@ _GPIO_SetPortState:
 ;;swapping arguments (AOP_TYPEs 1/2)
 ;;unsigned compare: left >= lit(0x5=5), size=1
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3325:pic14_mov2w_regOrLit
-	.line	28; "gpio.c"	switch(port)
+	.line	34; "gpio.c"	switch(port)
 	MOVLW	0x05
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:3492:genCmp
 ;;	1126 rIdx = r0x104C 
@@ -4970,7 +4780,7 @@ _00135_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104D 
 _00121_DS_:
-	.line	31; "gpio.c"	SetRegister(PORTA,state) ;
+	.line	37; "gpio.c"	SetRegister(PORTA,state) ;
 	MOVF	r0x101B,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -4980,7 +4790,7 @@ _00121_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 20
-	.line	32; "gpio.c"	break;
+	.line	38; "gpio.c"	break;
 	GOTO	_00128_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -4998,7 +4808,7 @@ _00121_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104D 
 _00122_DS_:
-	.line	34; "gpio.c"	SetRegister(PORTB,state) ;
+	.line	40; "gpio.c"	SetRegister(PORTB,state) ;
 	MOVF	r0x101B,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -5008,7 +4818,7 @@ _00122_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 20
-	.line	35; "gpio.c"	break;
+	.line	41; "gpio.c"	break;
 	GOTO	_00128_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -5026,7 +4836,7 @@ _00122_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104D 
 _00123_DS_:
-	.line	37; "gpio.c"	SetRegister(PORTC,state) ;
+	.line	43; "gpio.c"	SetRegister(PORTC,state) ;
 	MOVF	r0x101B,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -5036,7 +4846,7 @@ _00123_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 20
-	.line	38; "gpio.c"	break;
+	.line	44; "gpio.c"	break;
 	GOTO	_00128_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -5054,7 +4864,7 @@ _00123_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104D 
 _00124_DS_:
-	.line	40; "gpio.c"	SetRegister(PORTD,state) ;
+	.line	46; "gpio.c"	SetRegister(PORTD,state) ;
 	MOVF	r0x101B,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -5064,7 +4874,7 @@ _00124_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2820:genGoto *{*
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2822:genGoto
 ;; ***	popGetLabel  key=8, label offset 20
-	.line	41; "gpio.c"	break;
+	.line	47; "gpio.c"	break;
 	GOTO	_00128_DS_
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2802:genLabel *{*
@@ -5082,7 +4892,7 @@ _00124_DS_:
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104D 
 _00125_DS_:
-	.line	43; "gpio.c"	SetRegister(PORTE,state) ;
+	.line	49; "gpio.c"	SetRegister(PORTE,state) ;
 	MOVF	r0x101B,W
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7313:genAssign
 ;;	1027
@@ -5095,7 +4905,7 @@ _00125_DS_:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
 _00128_DS_:
-	.line	49; "gpio.c"	}
+	.line	55; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_SetPortState
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -5119,7 +4929,7 @@ _GPIO_UpdatePin:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	25; "gpio.c"	}
+	.line	31; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_UpdatePin
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -5143,7 +4953,7 @@ _GPIO_UpdatePort:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	21; "gpio.c"	}
+	.line	27; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_UpdatePort
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -5170,7 +4980,7 @@ _GPIO_InitPin:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1048, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1048 
-	.line	11; "gpio.c"	void GPIO_InitPin(tPORT port , tPIN pin ,tPIN_DIRECTION direction ,tSTATE init_state)
+	.line	16; "gpio.c"	void GPIO_InitPin(tPORT port , tPIN pin ,tPIN_DIRECTION direction ,tSTATE init_state)
 	MOVWF	r0x101C
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -5226,7 +5036,7 @@ _GPIO_InitPin:
 ;; ***	mov2w  1395  offset=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104A 
-	.line	14; "gpio.c"	GPIO_SetPinDirection(port,pin ,direction) ;
+	.line	19; "gpio.c"	GPIO_SetPinDirection(port,pin ,direction) ;
 	MOVF	r0x101E,W
 ;;	708 register type nRegs=1
 ;; 	2158 left AOP_REG
@@ -5269,7 +5079,7 @@ _GPIO_InitPin:
 ;; ***	mov2w  1395  offset=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x104B 
-	.line	16; "gpio.c"	GPIO_SetPinState(port ,pin ,init_state) ;
+	.line	21; "gpio.c"	GPIO_SetPinState(port ,pin ,init_state) ;
 	MOVF	r0x101F,W
 ;;	708 register type nRegs=1
 ;; 	2158 left AOP_REG
@@ -5303,7 +5113,7 @@ _GPIO_InitPin:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	17; "gpio.c"	}
+	.line	22; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_InitPin
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*
@@ -5330,7 +5140,7 @@ _GPIO_InitPort:
 ;; 	line = 1933 result -=-, size=0, left AOP_REG=r0x1045, size=1, right -=-, size=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1407:movwf
 ;;	1126 rIdx = r0x1045 
-	.line	4; "gpio.c"	void GPIO_InitPort(tPORT port ,tPORT_DIRECTION direction ,tSTATE init_state)
+	.line	9; "gpio.c"	void GPIO_InitPort(tPORT port ,tPORT_DIRECTION direction ,tSTATE init_state)
 	MOVWF	r0x1020
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7642:genReceive *{*
@@ -5371,7 +5181,7 @@ _GPIO_InitPort:
 ;; ***	mov2w  1395  offset=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1046 
-	.line	7; "gpio.c"	GPIO_SetPortDirection(port,direction) ;
+	.line	12; "gpio.c"	GPIO_SetPortDirection(port,direction) ;
 	MOVF	r0x1021,W
 ;;	708 register type nRegs=1
 ;; 	2158 left AOP_REG
@@ -5402,7 +5212,7 @@ _GPIO_InitPort:
 ;; ***	mov2w  1395  offset=0
 ;; >>> /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:1400:mov2w
 ;;	1126 rIdx = r0x1047 
-	.line	9; "gpio.c"	GPIO_SetPortState(port,init_state) ;
+	.line	14; "gpio.c"	GPIO_SetPortState(port,init_state) ;
 	MOVF	r0x1022,W
 ;;	708 register type nRegs=1
 ;; 	2158 left AOP_REG
@@ -5426,7 +5236,7 @@ _GPIO_InitPort:
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2358:resultRemat *{*
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:2570:genEndFunction *{*
 ;; ***	genEndFunction  2572
-	.line	10; "gpio.c"	}
+	.line	15; "gpio.c"	}
 	RETURN	
 ; exit point of _GPIO_InitPort
 ;;; /home/sdcc-builder/build/sdcc-build/orig/sdcc/src/pic14/gen.c:7710:genpic14Code *{*

@@ -2,7 +2,7 @@
 #include "led.h"
 #include "utilites.h"
 
-#define DELAY_TIME  100
+#define DELAY_TIME  200
 
 static void LED_SetDirection(tLED led) ;
 static void LED_Toggle(tLED led) ;

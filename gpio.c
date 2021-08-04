@@ -1,6 +1,11 @@
-#include <pic16f877a.h>
 #include "gpio.h"
-#include "utilites.h"
+#include <pic16f877a.h>
+
+#define SetRegisterPin(Register,Pin,_1bitValue) ( Register = (Register & (~(1<<Pin ))) | (_1bitValue << Pin) )
+#define SetRegister(Register,_U8Value)          (Register = _U8Value )
+#define ReadRegisterPinValue(Register,Pin)       ((Register & ((1<<Pin)))>>Pin)
+#define ReadRegisterValue(Register)              (Register)
+
 void GPIO_InitPort(tPORT port ,tPORT_DIRECTION direction ,tSTATE init_state)
 {
     /* initialize port direction */
@@ -15,6 +20,7 @@ void GPIO_InitPin(tPORT port , tPIN pin ,tPIN_DIRECTION direction ,tSTATE init_s
    /* initialize pin state */
    GPIO_SetPinState(port ,pin ,init_state) ;
 }
+
 void GPIO_UpdatePort(void)
 {
  /* should do no thing */
@@ -119,9 +125,9 @@ void GPIO_SetPinDirection(tPORT port, tPIN pin ,tPIN_DIRECTION direction)
     break ;
     }
 }
-U8 GPIO_GetPortState(tPORT port)
+unsigned char GPIO_GetPortState(tPORT port)
 {
-    U8 ret = 0 ;
+    unsigned char ret = 0 ;
     switch(port)
     {
     case PORT_A :
@@ -145,9 +151,9 @@ U8 GPIO_GetPortState(tPORT port)
     }
     return ret ;
 }
-U8 GPIO_GetPortDirection(tPORT port)
+unsigned char GPIO_GetPortDirection(tPORT port)
 {
-    U8 ret = 0 ;
+    unsigned char ret = 0 ;
     switch(port)
     {
     case PORT_A :
@@ -223,3 +229,4 @@ tPIN_DIRECTION GPIO_GetPinDirection(tPORT port, tPIN pin)
     }
     return ret ;
 }
+
